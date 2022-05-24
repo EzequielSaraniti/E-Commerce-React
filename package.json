@@ -2,7 +2,7 @@
   "name": "e-commerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ezequielsaraniti.github.io/E-Commerce-React/",
+  "homepage": "https://ezequielsaraniti.github.io/E-Commerce-React/",
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "@testing-library/jest-dom": "^5.16.4",
