@@ -1,8 +1,8 @@
 {
-  "name": "e-commerce",
+  "name": "E-Commerce-React",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ezequielsaraniti.github.io/E-Commerce-React/",
+  "homepage": "http://ezequielsaraniti.github.io/E-Commerce-React/",
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "@testing-library/jest-dom": "^5.16.4",
@@ -16,12 +16,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/EzequielSaraniti/E-Commerce-React"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
