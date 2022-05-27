@@ -1,6 +1,7 @@
-import logo from "../logo.svg";
-import { Navbar } from "react-bootstrap";
+import logo from "../img/logoHakunix.png";
+import imgComprar from "../img/comprar.png";
 import React from "react";
+import CartWidget from "./CartWidget.jsx"
 
 function NavBar() {
     return (
@@ -27,11 +28,6 @@ function NavBar() {
                                 Inicio
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Nosotros
-                            </a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -46,12 +42,22 @@ function NavBar() {
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        Deco
+                                        Accesorios 
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        Moda
+                                        Pijamas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Papelería
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Regalos
                                     </a>
                                 </li>
                                 <li>
@@ -59,16 +65,20 @@ function NavBar() {
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        Todos nuestros productos
+                                        Todos los productos
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Proximamente</a>
-                        </li>
+                        <a class="nav-link" aria-current="page" href="#">
+                                Nosotros
+                        </a>
+                        <a class="nav-link" aria-current="page" href="#">
+                                Contactanos
+                        </a>
                     </ul>
                 </div>
+                <CartWidget />
             </div>
         </nav>
     );
