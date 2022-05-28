@@ -78,7 +78,7 @@ function NavBar() {
                         </a>
                     </ul>
                 </div>
-                <CartWidget />
+                <CartWidget items={2}/>
             </div>
         </nav>
     );

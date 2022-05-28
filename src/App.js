@@ -11,7 +11,7 @@ function App() {
   return (
   <div>
   <NavBar/>
-  <ItemListContainer />
+  <ItemListContainer cars={"Bienvenido/a a la mejor página de Rosario"} />
   </div>
   
   
