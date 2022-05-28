@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9d99117a029c6923d5f7",
-    "url": "/E-Commerce-React/static/css/main.83c603af.chunk.css"
+    "revision": "b21e36eba9a66a817466",
+    "url": "/E-Commerce-React/static/css/main.91a9e4be.chunk.css"
   },
   {
-    "revision": "9d99117a029c6923d5f7",
-    "url": "/E-Commerce-React/static/js/main.9d99117a.chunk.js"
+    "revision": "b21e36eba9a66a817466",
+    "url": "/E-Commerce-React/static/js/main.b21e36eb.chunk.js"
   },
   {
     "revision": "05a8e767b6b683ee5dc9",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/E-Commerce-React/static/media/logo.06e73328.svg"
   },
   {
-    "revision": "bf19a17509e4b0b759de35c1d1849fcc",
+    "revision": "c14974c632465af83f76dc0a94126767",
     "url": "/E-Commerce-React/index.html"
   }
 ];
