@@ -1,7 +1,7 @@
 {
   "main.css": "/E-Commerce-React/static/css/main.2cbea43d.chunk.css",
-  "main.js": "/E-Commerce-React/static/js/main.f4255a3b.chunk.js",
-  "main.js.map": "/E-Commerce-React/static/js/main.f4255a3b.chunk.js.map",
+  "main.js": "/E-Commerce-React/static/js/main.68ecfecb.chunk.js",
+  "main.js.map": "/E-Commerce-React/static/js/main.68ecfecb.chunk.js.map",
   "static/js/1.8c98aab8.chunk.js": "/E-Commerce-React/static/js/1.8c98aab8.chunk.js",
   "static/js/1.8c98aab8.chunk.js.map": "/E-Commerce-React/static/js/1.8c98aab8.chunk.js.map",
   "static/css/2.d32ca4c1.chunk.css": "/E-Commerce-React/static/css/2.d32ca4c1.chunk.css",
@@ -15,6 +15,6 @@
   "static/css/main.2cbea43d.chunk.css.map": "/E-Commerce-React/static/css/main.2cbea43d.chunk.css.map",
   "static/css/2.d32ca4c1.chunk.css.map": "/E-Commerce-React/static/css/2.d32ca4c1.chunk.css.map",
   "index.html": "/E-Commerce-React/index.html",
-  "precache-manifest.3e79978808692c1d4504e6f01693e0ad.js": "/E-Commerce-React/precache-manifest.3e79978808692c1d4504e6f01693e0ad.js",
+  "precache-manifest.bb0f1e33c15ac528a3994b36e946a60e.js": "/E-Commerce-React/precache-manifest.bb0f1e33c15ac528a3994b36e946a60e.js",
   "service-worker.js": "/E-Commerce-React/service-worker.js"
 }

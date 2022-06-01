@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f4255a3bddbd9d2fb4df",
+    "revision": "68ecfecbc29bef57dacf",
     "url": "/E-Commerce-React/static/css/main.2cbea43d.chunk.css"
   },
   {
-    "revision": "f4255a3bddbd9d2fb4df",
-    "url": "/E-Commerce-React/static/js/main.f4255a3b.chunk.js"
+    "revision": "68ecfecbc29bef57dacf",
+    "url": "/E-Commerce-React/static/js/main.68ecfecb.chunk.js"
   },
   {
     "revision": "8c98aab82769540efb62",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/E-Commerce-React/static/media/yerbera.ecca1400.jpg"
   },
   {
-    "revision": "cb1704c7f344010215b9a635bd32d9ac",
+    "revision": "40e89f97736cde86f4ee3b58139dc28b",
     "url": "/E-Commerce-React/index.html"
   }
 ];
