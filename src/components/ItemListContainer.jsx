@@ -4,7 +4,7 @@ export default function ItemListContainer({cars}) {
     return (
         <div>
 
-            <h3 className='titleInicio'>{cars}</h3>
+            <h6 className='titleInicio'>{cars}</h6>
 
         </div>
     )
