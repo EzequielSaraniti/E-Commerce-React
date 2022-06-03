@@ -1,44 +1,43 @@
 import React, { useState, useEffect } from 'react'
 
-const imgProductos = require.context("../img", true)
-
-
 export default function ItemCount({ stock, initial, onAdd }) {
 
 
-    const [X, setX] = useState(initial)
-    const [Y, setY] = useState(stock)
+    const [valorInicial, setCantidad] = useState(initial)
+    const [stockArticulos, setStock] = useState(stock)
 
 
     return (
-        <div className='cardH'>
-            <img className='imgProducto' src={ imgProductos(`./yerbera.jpg`) } alt={ "Producto1" } width="190px" />
-            <p>Yerbera y Azucarera</p>
+        <div className='centerCount'>
+
             <div className='agregarItems'>
-                <button type='button' className='btnCard' onClick={() => {
 
-                    if (X > 1) {
-                        setX(X - 1)
-                    }
+                {/* BOTON RESTAR */}
+                <button type='button' className='btnCard' onClick={() => 
+                    {valorInicial > 1 && setCantidad(valorInicial - 1)}}>-</button>
 
-                }}>-</button>
-                <input className='inputCard' value={X} />
-                <button type='button' className='btnCard' onClick={() => {
-                    if (X < stock) {
-                        setX(X + 1)
-                    }
-                }}>+</button>
+                {/* Input indicador de cantidas seleccionada */}
+                <input className='inputCard' value={valorInicial} />
+
+                {/* BOTON SUMAR */}
+                <button type='button' className='btnCard' onClick={() => 
+                    {valorInicial < stock && setCantidad(valorInicial + 1)}}>+</button>
             </div>
-            <button type='button' className='btnAddCar' onClick={() => { 
 
-                    if (Y - X >= 0){
-                        alert("Se agregaron " + X + " Items al carrito")
-                        setY(Y - X)
-                    }else{
-                        alert("No hay stock, quedan "+ Y +" unidades")
-                    }
+            {/* Boton agregar al carrito */}
+            <button type='button' className='btnAddCar' onClick={addToCart}>Agregar al carrito</button>
 
-                }}>Agregar al carrito</button>
         </div>
     )
+
+  function addToCart(){
+        if (stockArticulos - valorInicial >= 0){
+            alert("Se agregaron " + valorInicial + " Items al carrito")
+            setStock(stockArticulos - valorInicial)
+        }else{
+            alert("No hay stock, quedan "+ stockArticulos +" unidades")
+        }
+    }
+
 }
+

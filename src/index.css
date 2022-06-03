@@ -27,7 +27,7 @@ code {
 
 .cantidadCompras{
   font-size: 0.8rem;
-  position: fixed;
+  position:absolute;
   background-color: rgb(204, 116, 0);
   color: white;
   padding: 0px 2px 0px 2px;
