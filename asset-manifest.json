@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-Commerce-React/static/css/main.23ed8614.css",
-    "main.js": "/E-Commerce-React/static/js/main.d3debf67.js",
+    "main.css": "/E-Commerce-React/static/css/main.397e9218.css",
+    "main.js": "/E-Commerce-React/static/js/main.0db8045a.js",
     "static/js/787.46493d11.chunk.js": "/E-Commerce-React/static/js/787.46493d11.chunk.js",
     "static/media/alfombra.jpg": "/E-Commerce-React/static/media/alfombra.1b3141129638806473b6.jpg",
     "static/media/guantehorno.jpg": "/E-Commerce-React/static/media/guantehorno.ff236467c8cd06fc6900.jpg",
@@ -11,12 +11,12 @@
     "static/media/atomizador.jpg": "/E-Commerce-React/static/media/atomizador.b44f11b92d22ee8d009a.jpg",
     "static/media/logoHakunix.png": "/E-Commerce-React/static/media/logoHakunix.cd65f92268229e148434.png",
     "index.html": "/E-Commerce-React/index.html",
-    "main.23ed8614.css.map": "/E-Commerce-React/static/css/main.23ed8614.css.map",
-    "main.d3debf67.js.map": "/E-Commerce-React/static/js/main.d3debf67.js.map",
+    "main.397e9218.css.map": "/E-Commerce-React/static/css/main.397e9218.css.map",
+    "main.0db8045a.js.map": "/E-Commerce-React/static/js/main.0db8045a.js.map",
     "787.46493d11.chunk.js.map": "/E-Commerce-React/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23ed8614.css",
-    "static/js/main.d3debf67.js"
+    "static/css/main.397e9218.css",
+    "static/js/main.0db8045a.js"
   ]
 }
