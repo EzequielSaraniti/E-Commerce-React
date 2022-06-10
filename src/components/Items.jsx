@@ -23,7 +23,7 @@ export default function Items({ id, title, description, price, pictureUrl, stock
 
             {/* Boton mas detalles */}
             {/* <button type='button' className='btnAddCar'>Detalles</button> */}
-            <Link to={`/item/${id}`}>Ver mas detalles</Link>
+            <Link className='btnAddCar' to={`/item/${id}`}>Ver mas detalles</Link>
 
             {/* Contador y agregar al carrito */}
             <ItemCount stock={stock} initial={1} />

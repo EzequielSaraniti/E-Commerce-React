@@ -109,9 +109,20 @@
   background-color: #947EC3;
   border: black 0.1px solid;
   padding: 5px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: dashed;
+}
+
+.btnAddCar:hover{
+  background-color: #947EC3;
+  border: black 0.1px solid;
+  padding: 5px;
   color: #EEF3D2;
   font-weight: 500;
   border-radius: 5px;
+  text-decoration: dashed;
 }
 
 .imgProducto{
