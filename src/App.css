@@ -49,12 +49,12 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  max-width: 200px;
+  max-width: 300px;
   max-height: 700px;
-  background-color: #EEF3D2;
+  background-color: white;
   border: #282c34 1px solid;
   border-radius: 10px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.452);
+  box-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.452);
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -72,7 +72,7 @@
   width: 30px;
   text-align: center;
   border: none;
-  background-color: #EEF3D2;
+  background-color: white;
 }
 
 .btnCard{
@@ -81,6 +81,7 @@
   border: black 0.1px solid;
   color: #EEF3D2;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .styleNav{
@@ -110,6 +111,7 @@
   padding: 5px;
   color: #EEF3D2;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .imgProducto{
@@ -136,3 +138,119 @@
 .styleTitle{
   text-align: center;
 }
+
+.from-gray-100 {
+  --gradient-from-color: #f7fafc;
+  --gradient-color-stops: var(--gradient-from-color),var(--gradient-to-color,rgba(247,250,252,0));
+}
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom,var(--gradient-color-stops));
+}
+
+.cardDetalles{
+  width: 95%;
+  height: 90vh;
+  border: 0.2px rgba(0, 0, 0, 0.171) solid;
+  border-radius: 50px;
+  margin: 2.5%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+                      "titleDetails titleDetails titleDetails titleDetails"
+                      "imgProductoDetail imgProductoDetail imgProductoDetail imgProductoDetail"
+                      "textDetails textDetails textDetails textDetails"
+                      "precioDetails precioDetails precioDetails precioDetails"
+}
+
+.imgProductoDetail{
+  grid-area: imgProductoDetail;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleDetails{
+  grid-area: titleDetails;
+  text-align: center;
+}
+
+.textDetails{
+  grid-area: textDetails;
+  text-align: center;
+}
+
+.precioDetails{
+  grid-area: precioDetails;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+@media (min-width: 576px) { 
+
+  .cardDetalles{
+    width: 95%;
+    height: 90vh;
+    border: 0.2px rgba(0, 0, 0, 0.171) solid;
+    border-radius: 50px;
+    margin: 2.5%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        "titleDetails titleDetails titleDetails titleDetails"
+                        "imgProductoDetail imgProductoDetail imgProductoDetail imgProductoDetail"
+                        "textDetails textDetails textDetails textDetails"
+                        "precioDetails precioDetails precioDetails precioDetails"
+  }
+
+ }
+
+
+
+@media (min-width: 768px) { 
+
+  .cardDetalles{
+    width: 95%;
+    height: 90vh;
+    border: 0.2px rgba(0, 0, 0, 0.171) solid;
+    border-radius: 50px;
+    margin: 2.5%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        "imgProductoDetail imgProductoDetail titleDetails titleDetails"
+                        "imgProductoDetail imgProductoDetail textDetails textDetails"
+                        "imgProductoDetail imgProductoDetail textDetails textDetails"
+                        "imgProductoDetail imgProductoDetail precioDetails precioDetails"
+  }
+
+ }
+
+
+
+@media (min-width: 992px) { 
+
+
+ }
+
+
+
+@media (min-width: 1200px) { 
+
+
+ }
+
+
+
+@media (min-width: 1400px) { 
+
+
+ }

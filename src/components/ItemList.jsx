@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Items from "./Items.jsx"
+import {Route, useParams} from 'react-router-dom';
 
 
-export default function ItemList() {
+export default function ItemList({category}) {
 
     //estados
     const [loading, setLoading] = useState(true);
@@ -11,57 +12,79 @@ export default function ItemList() {
 
     useEffect(() => {
 
-        const cardProduct = new Promise((res, rej) => {
-            setTimeout(() => {
-                res([{ id: 1, title: "Yerbera y Azucarera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ", price: 550, pictureUrl:"yerbera.jpg"},
+        fetch('productos.json'
+            , {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        )
+            .then((response) => response.json())
+            .then((data) => {
 
-                { id: 2, title: "Alfombra Llamita", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ", price: 450, pictureUrl:"alfombra.jpg"},
+                setTimeout(() => {
 
-                { id: 3, title: "Atomizador", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ", price: 350, pictureUrl:"atomizador.jpg"},
+                    setLoading(false)
+                    setResultado(data);
 
-                { id: 4, title: "Bolso de Mate", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ", price: 800, pictureUrl:"bolsodemate.jpg"},
-
-                { id: 5, title: "Equipo de mate", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ", price: 650, pictureUrl:"equipodemate.jpg"},
-
-                { id: 6, title: "Guante de horno", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ", price: 275, pictureUrl:"guantehorno.jpg"}]);
-
-                // rej("No pudimos cargar los productos!!!!")
-            }, 2000);
-        },[]);
-
-
-        //Si funciona usamos .then
-        cardProduct
-            .then((result) => {
-                // setLoading(false);
-                setResultado(result);
+                }, 1000);
             })
-            //Si tira error usamos .catch
-            .catch((error) => {
-                // setLoading(false);
-                setError(true);
+            .catch((e) => {
+
+            //este fetch es para arreglar un problema de rutas, cuando usemos FireBase Vuelta todo este contenido.
+                fetch('../productos.json'
+            , {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        )
+            .then((response) => response.json())
+            .then((data) => {
+
+                setTimeout(() => {
+
+                    setLoading(false)
+                    setResultado(data);
+
+                },0);
             })
-            //Una ves terminado ponemos en False el Loading
+             //BORRAR Hasta acá.
+            })
             .finally(() => {
-                setLoading(false);
-            });
-    }, []);
+                console.log("fin")
+            })
+    }, [])
 
-  return (
-    <>
 
-        <div>{loading && "Cargando productos..."}</div>
-        <div>{error && "Tienes un error..."}</div>
+    let filterResult = []
+    //Filtramos por category
+    if (category != undefined){
+        filterResult = resultado.filter(num => num.category === category)
+    } else {
+        filterResult = resultado
+    }
 
-        <div className='itemsListStyle'>
-        {resultado && (resultado.map((item) => 
-        <Items id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} />
-        ))}
-        </div>
 
-    
-    {/* <Items/> */}
-    </>
-  )
+    return (
+        <>
+
+            <div>{loading && "Cargando productos..."}</div>
+            <div>{error && "Tienes un error..."}</div>
+
+            
+
+            <div className='itemsListStyle'>
+                {filterResult && (filterResult.map((item) =>
+                    <Items id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} stock={item.stock} />
+                ))}
+            </div>
+
+
+            {/* <Items/> */}
+        </>
+    )
 }
 

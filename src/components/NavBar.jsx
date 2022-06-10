@@ -1,17 +1,15 @@
 import logo from "../img/logoHakunix.png";
-import imgComprar from "../img/comprar.png";
 import React from "react";
 import CartWidget from "./CartWidget.jsx"
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 
 function NavBar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark styleNav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src={logo} className="Logo" width="135px" />
-                </a>
+        <nav className="navbar navbar-expand-lg navbar-dark styleNav">
+            <div className="container-fluid">
+                <Link to="/"><img src={logo} className="Logo navbar-brand" width="135px" /></Link>
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
@@ -19,63 +17,41 @@ function NavBar() {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                Inicio
-                            </a>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link active">Inicio</Link>
                         </li>
                         <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <Link to="*" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</Link>
+                                
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        Accesorios 
-                                    </a>
+                                    <Link to="/category/accesorios" className="dropdown-item">Accesorios</Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        Pijamas
-                                    </a>
+                                    <Link to="/category/pijamas" className="dropdown-item">Pijamas</Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        Papelería
-                                    </a>
+                                    <Link to="/category/papeleria" className="dropdown-item">Papelería</Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        Regalos
-                                    </a>
+                                    <Link to="/category/regalos" className="dropdown-item">Regalos</Link>
                                 </li>
                                 <li>
-                                    <hr class="dropdown-divider" />
+                                    <hr className="dropdown-divider" />
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
-                                        Todos los productos
-                                    </a>
+                                    <Link to="/" className="dropdown-item">Todos los productos</Link>
                                 </li>
                             </ul>
                         </li>
-                        <a class="nav-link" aria-current="page" href="#">
-                                Nosotros
-                        </a>
-                        <a class="nav-link" aria-current="page" href="#">
-                                Contactanos
-                        </a>
+                        <Link to="/nosotros/" className="nav-link">Nosotros</Link>
+
+                        <Link to="/contactanos/" className="nav-link">Contactanos</Link>
                     </ul>
                 </div>
                 <CartWidget items={2}/>

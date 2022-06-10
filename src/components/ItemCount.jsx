@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom';
 
 export default function ItemCount({ stock, initial, onAdd }) {
 
@@ -26,6 +27,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
 
             {/* Boton agregar al carrito */}
             <button type='button' className='btnAddCar' onClick={addToCart}>Agregar al carrito</button>
+            
 
         </div>
     )

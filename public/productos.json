@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Yerbera y Azucarera",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ",
+        "price": 550,
+        "pictureUrl": "yerbera.jpg",
+        "category": "accesorios",
+        "stock": 10
+    },
+    {
+        "id": 2,
+        "title": "Alfombra Llamita",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ",
+        "price": 450,
+        "pictureUrl": "alfombra.jpg",
+        "category": "pijamas",
+        "stock": 11
+    },
+    {
+        "id": 3,
+        "title": "Atomizador",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ",
+        "price": 350,
+        "pictureUrl": "atomizador.jpg",
+        "category": "papeleria",
+        "stock": 5
+    },
+    {
+        "id": 4,
+        "title": "Bolso de Mate",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ",
+        "price": 800,
+        "pictureUrl": "bolsodemate.jpg",
+        "category": "regalos",
+        "stock": 7
+    },
+    {
+        "id": 5,
+        "title": "Equipo de mate",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ",
+        "price": 650,
+        "pictureUrl": "equipodemate.jpg",
+        "category": "accesorios",
+        "stock": 55
+    },
+    {
+        "id": 6,
+        "title": "Guante de horno",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deserunt, dolor nobis exercitationem nihil minima. ",
+        "price": 275,
+        "pictureUrl": "guantehorno.jpg",
+        "category": "accesorios",
+        "stock": 66
+    }
+]
