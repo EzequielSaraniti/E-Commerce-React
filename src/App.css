@@ -143,6 +143,12 @@
   flex-wrap: wrap;
 }
 
+.itemListLoading{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
 .descItem{
   text-align: center;
 }
@@ -199,6 +205,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.loading{
+  margin-top: 20%;
+  width: 50px;
 }
 
 
