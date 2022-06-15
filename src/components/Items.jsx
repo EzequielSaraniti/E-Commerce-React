@@ -25,12 +25,6 @@ export default function Items({ id, title, description, price, pictureUrl, stock
             {/* <button type='button' className='btnAddCar'>Detalles</button> */}
             <Link className='btnAddCar' to={`/item/${id}`}>Ver mas detalles</Link>
 
-            {/* Contador y agregar al carrito */}
-            <ItemCount stock={stock} initial={1} />
-
-            {/* Stock restante */}
-            <p>Cant. Disponible: {stock}</p>
-
         </div>
 
     )

@@ -113,6 +113,7 @@
   font-weight: 500;
   border-radius: 5px;
   text-decoration: dashed;
+  margin-bottom: 15px;
 }
 
 .btnAddCar:hover{

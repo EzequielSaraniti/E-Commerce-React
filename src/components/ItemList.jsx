@@ -77,7 +77,7 @@ export default function ItemList({category}) {
             
 
             <div className='itemsListStyle'>
-                {filterResult && (filterResult.map((item) =>
+                {filterResult && (filterResult?.map((item) =>
                     <Items id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} stock={item.stock} />
                 ))}
             </div>

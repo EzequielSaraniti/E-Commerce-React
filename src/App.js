@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import ItemListContainer from "./components/ItemListContainer.jsx"
 import ItemDetailContainer from "./components/ItemDetailContainer.jsx"
+import Cart from "./components/Cart.jsx"
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ItemList from './components/ItemList.jsx';
@@ -18,6 +19,8 @@ function App() {
         <Routes>
         <Route path="/" element={<ItemListContainer />} />
 
+        <Route path="/cart" element={<Cart />} />
+
         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           
         <Route path="/category/accesorios" element={<ItemListContainer category={"accesorios"} />} />
@@ -28,9 +31,11 @@ function App() {
           
         <Route path="/category/regalos" element={<ItemListContainer category={"regalos"} />} />
 
+        <Route path="*" element={<ItemListContainer />} />
+
         </Routes>
       </BrowserRouter>
-    </div>
+    </div>  
 
   );
 }

@@ -1,8 +1,6 @@
-import React from 'react'
-import { ItemDetail } from './ItemDetail';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Items from './Items.jsx';
+import { ItemDetail } from './ItemDetail';
 
 export default function ItemDetailContainer() {
 
@@ -34,7 +32,7 @@ export default function ItemDetailContainer() {
     return (
         <div>
 
-            {itemDet && (itemDet.map((item) => 
+            {itemDet && (itemDet?.map((item) => 
                 <ItemDetail id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} stock={item.stock} />
             ))}
 

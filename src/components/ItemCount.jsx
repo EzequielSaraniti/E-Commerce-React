@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom';
 
-export default function ItemCount({ stock, initial, onAdd }) {
-
-
-    const [valorInicial, setCantidad] = useState(initial)
-    const [stockArticulos, setStock] = useState(stock)
+export default function ItemCount({ stock, initial, onAdd, restar, sumar, cantSelect }) {
 
 
     return (
@@ -14,32 +10,20 @@ export default function ItemCount({ stock, initial, onAdd }) {
             <div className='agregarItems'>
 
                 {/* BOTON RESTAR */}
-                <button type='button' className='btnCard' onClick={() => 
-                    {valorInicial > 1 && setCantidad(valorInicial - 1)}}>-</button>
+                <button type='button' className='btnCard' onClick={restar}>-</button>
 
                 {/* Input indicador de cantidas seleccionada */}
-                <input className='inputCard' value={valorInicial} />
+                <input className='inputCard' value={cantSelect} />
 
                 {/* BOTON SUMAR */}
-                <button type='button' className='btnCard' onClick={() => 
-                    {valorInicial < stock && setCantidad(valorInicial + 1)}}>+</button>
+                <button type='button' className='btnCard' onClick={sumar}>+</button>
             </div>
 
             {/* Boton agregar al carrito */}
-            <button type='button' className='btnAddCar' onClick={addToCart}>Agregar al carrito</button>
+            <button type='button' className='btnAddCar' onClick={onAdd}>Agregar al carrito</button>
             
-
         </div>
     )
-
-  function addToCart(){
-        if (stockArticulos - valorInicial >= 0){
-            alert("Se agregaron " + valorInicial + " Items al carrito")
-            setStock(stockArticulos - valorInicial)
-        }else{
-            alert("No hay stock, quedan "+ stockArticulos +" unidades")
-        }
-    }
 
 }
 
