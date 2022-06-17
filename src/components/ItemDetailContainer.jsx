@@ -32,9 +32,7 @@ export default function ItemDetailContainer() {
     return (
         <div>
 
-            {itemDet && (itemDet?.map((item) => 
-                <ItemDetail id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} stock={item.stock} />
-            ))}
+            {itemDet && <ItemDetail itemDet={itemDet} />}
 
         </div>
     )

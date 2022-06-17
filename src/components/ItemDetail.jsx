@@ -4,7 +4,12 @@ import {useState} from 'react';
 import {Link} from 'react-router-dom';
 const imgProductos = require.context("../img", true)
 
-export function ItemDetail({id, title, description, price, pictureUrl, stock}) {
+export function ItemDetail({itemDet}) {
+
+  console.log(itemDet)
+
+  const [{id, title, description, price, pictureUrl, stock}] = itemDet
+
 
   const [valorInicial, setCantidad] = useState(1)
   const [stockArticulos, setStock] = useState(stock)
