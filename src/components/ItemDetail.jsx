@@ -1,17 +1,20 @@
 import React from 'react'
 import ItemCount from './ItemCount.jsx';
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
+import { CartContext } from '../context/CartContext.jsx';
 const imgProductos = require.context("../img", true)
+
 
 export function ItemDetail({itemDet}) {
 
-  console.log(itemDet)
 
   const [{id, title, description, price, pictureUrl, stock}] = itemDet
 
+  const {isInCart, addItem} = useContext(CartContext)
 
-  const [valorInicial, setCantidad] = useState(1)
+
+  const [cantidad, setCantidad] = useState(1)
   const [stockArticulos, setStock] = useState(stock)
   const [articulosAgregados, setArtAdd] = useState(0)
 
@@ -34,7 +37,7 @@ export function ItemDetail({itemDet}) {
         {articulosAgregados === 0 && <b>Precio: ${price}</b>}
 
           {articulosAgregados === 0 && 
-          <ItemCount stock={stock} initial={1} onAdd={addToCart} restar={restar} sumar={sumar} cantSelect={valorInicial} />}
+          <ItemCount stock={stock} initial={1} onAdd={onAdd} restar={restar} sumar={sumar} cantSelect={cantidad} />}
 
           {articulosAgregados > 0 && <Link className='btnAddCar' to={`/cart`}>Finalizar Compra</Link>}
 
@@ -48,22 +51,25 @@ export function ItemDetail({itemDet}) {
     </div>
   )
 
-  function addToCart(){
-    if (stockArticulos - valorInicial >= 0){
-        alert("Se agregaron " + valorInicial + " Items al carrito")
-        setArtAdd(valorInicial)
-        setStock(stockArticulos - valorInicial)
+  function onAdd(){
+    if (stockArticulos - cantidad >= 0){
+        isInCart(id)
+        addItem(itemDet, cantidad)
+
+        //controlamos la cantidad de articulos agregados
+        setArtAdd(cantidad)
+        setStock(stockArticulos - cantidad)
     }else{
         alert("No hay stock, quedan "+ stockArticulos +" unidades")
     }
 }
 
 function restar(){
-  {valorInicial > 1 && setCantidad(valorInicial - 1)}
+  {cantidad > 1 && setCantidad(cantidad - 1)}
 }
 
 function sumar(){
-  {valorInicial < stock && setCantidad(valorInicial + 1)}
+  {cantidad < stock && setCantidad(cantidad + 1)}
 }
 
 

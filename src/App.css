@@ -277,3 +277,51 @@
 
 
  }
+
+ .cartContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+                      "imgProducto precioCart cantidadCart subtotalCart eliminarItemCard"
+                      "imgProducto precioCart cantidadCart subtotalCart eliminarItemCard"
+                      "imgProducto precioCart cantidadCart subtotalCart eliminarItemCard"
+                      "titleCart precioCart cantidadCart subtotalCart eliminarItemCard"
+
+ }
+
+  .titleCart{
+    grid-area: titleCart;
+    text-align: center;
+  }
+
+  .imgProducto{
+    grid-area: imgProducto;
+  }
+
+  .textCart{
+    grid-area: textCart;
+    text-align: center;
+  }
+
+  .precioCart{
+    grid-area: precioCart;
+    text-align: center;
+  }
+
+  .cantidadCart{
+    grid-area: cantidadCart;
+    text-align: center;
+  }
+
+  .subtotalCart{
+    grid-area: subtotalCart;
+    text-align: center;
+  }
+
+  .eliminarItemCard{
+    grid-area: eliminarItemCard;
+    text-align: center;
+  }

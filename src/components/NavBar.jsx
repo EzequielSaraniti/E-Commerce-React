@@ -24,7 +24,7 @@ function NavBar() {
                         <li className="nav-item">
                             <Link to="/" className="nav-link active">Inicio</Link>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li className="nav-item dropdown">
 
                             <Link to="*" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</Link>
                                 
@@ -54,7 +54,7 @@ function NavBar() {
                         <Link to="/contactanos/" className="nav-link">Contactanos</Link>
                     </ul>
                 </div>
-                <CartWidget items={2}/>
+                <CartWidget/>
             </div>
         </nav>
     );
