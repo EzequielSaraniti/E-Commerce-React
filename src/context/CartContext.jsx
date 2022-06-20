@@ -10,25 +10,27 @@ const MyProvider = ({children}) => {
 
     const [cart, setCart] = useState([])
 
-    //ItemDetail - Usamos some para saber si el item ya esta en el carrito o no.
-    const isInCart = (id) => {
-        return cart.some(item => item.id === id)
-    }
-
     // ItemDetail - Se va a encargar de agregar el producto seleccionado al carrito.
-    const addItem = (item, cantidad) => {
+    const addItem = ([item], cantidad) => {
+        
         const newItem = {...item, cantidad}
 
-        if (isInCart(newItem.id)) {
-            const findProduct = cart.find(item => item.id === newItem.id)
+        if (!isInCart(newItem.id)) {
+            setCart([...cart, newItem])
+        } else { 
+            const findProduct = (cart.find(item => item.id === newItem.id))
             const productIndex = cart.indexOf(findProduct)
             const newCart = [...cart]
-            newCart[productIndex].cantidad += newItem.cantidad
+            newCart[productIndex].cantidad += cantidad
             setCart(newCart)
-        } else {
-            setCart([...cart, newItem])
+            
         }
     }
+
+        //ItemDetail - Usamos some para saber si el item ya esta en el carrito o no.
+        const isInCart = (id) => {
+            return cart.some(item => item.id === id)
+        }
 
     // Cart - Se va a encargar de limpiar el carrito.
     const emptyCart = () => {
@@ -51,7 +53,7 @@ const MyProvider = ({children}) => {
     }
 
 
-    return <Provider value={{cart, isInCart, addItem, addItem, deleteItem, emptyCart, getItemPrice, getItemQty}} >{children}</Provider>
+    return <Provider value={{cart, isInCart, addItem, deleteItem, emptyCart, getItemPrice, getItemQty}} >{children}</Provider>
 }
 
 export default MyProvider

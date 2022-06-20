@@ -53,7 +53,6 @@ export function ItemDetail({itemDet}) {
 
   function onAdd(){
     if (stockArticulos - cantidad >= 0){
-        isInCart(id)
         addItem(itemDet, cantidad)
 
         //controlamos la cantidad de articulos agregados
