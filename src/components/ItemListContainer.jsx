@@ -63,7 +63,7 @@ export default function ItemListContainer({ category }) {
 
     return (
         <>
-            <h6 className='titleInicio'>Bienvenido/a a la mejor página de regalos - 10% de descuento solo pagos en Efectivo</h6>
+            <div className='titleInicio'>Bienvenido/a a la mejor página de regalos - 10% de descuento solo pagos en Efectivo</div>
 
             {loading && 
             <div className='itemListLoading'>

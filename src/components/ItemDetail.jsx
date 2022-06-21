@@ -39,7 +39,7 @@ export function ItemDetail({itemDet}) {
           {articulosAgregados === 0 && 
           <ItemCount stock={stock} initial={1} onAdd={onAdd} restar={restar} sumar={sumar} cantSelect={cantidad} />}
 
-          {articulosAgregados > 0 && <Link className='btnAddCar' to={`/cart`}>Finalizar Compra</Link>}
+          {articulosAgregados > 0 && <Link className='btnAddCar' to={`/cart`}>FINALIZAR COMPRA</Link>}
 
           
 

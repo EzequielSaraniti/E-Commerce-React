@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar.jsx"
+import Footer from "./components/Footer.jsx"
 import React, { Component } from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import ItemListContainer from "./components/ItemListContainer.jsx"
@@ -30,6 +31,7 @@ function App() {
           <Route path="*" element={<ItemListContainer />} />
 
           </Routes>
+          <Footer/>
         </MyProvider>
       </BrowserRouter>
     </div>  

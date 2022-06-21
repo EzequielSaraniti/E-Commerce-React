@@ -20,7 +20,7 @@ export default function ItemCount({ stock, initial, onAdd, restar, sumar, cantSe
             </div>
 
             {/* Boton agregar al carrito */}
-            <button type='button' className='btnAddCar' onClick={onAdd}>Agregar al carrito</button>
+            <button type='button' className='btnAddCar' onClick={onAdd}>AGREGAR AL CARRITO</button>
             
         </div>
     )

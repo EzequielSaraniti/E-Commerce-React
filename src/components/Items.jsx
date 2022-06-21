@@ -9,11 +9,12 @@ export default function Items({ id, title, description, price, pictureUrl, stock
     return (
         //Card
         <div className='cardH'>
-            {/* Titulo de producto */}
-            <b className='styleTitle'>{title}</b>
 
             {/* Imagen del producto */}
-            <img className='imgProducto' src={imgProductos(`./${pictureUrl}`)} alt={"Producto1"} width="190px" />
+            <img className='imgProducto' src={imgProductos(`./${pictureUrl}`)} alt={"Producto1"} width="300px" />
+
+            {/* Titulo de producto */}
+            <b className='styleTitle'>{title}</b>
 
             {/* Breve desc del producto */}
             <p className='descItem'>{description}</p>
@@ -23,7 +24,7 @@ export default function Items({ id, title, description, price, pictureUrl, stock
 
             {/* Boton mas detalles */}
             {/* <button type='button' className='btnAddCar'>Detalles</button> */}
-            <Link className='btnAddCar' to={`/item/${id}`}>Ver mas detalles</Link>
+            <Link className='btnAddCar' to={`/item/${id}`}>VER MAS DETALLE DEL PRODUCTO</Link>
 
         </div>
 

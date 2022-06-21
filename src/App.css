@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
 
 *{
   font-family: 'Montserrat Alternates', sans-serif;
@@ -44,6 +45,17 @@
   }
 }
 
+.body{
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    background-color: rgb(255, 255, 255);
+}
+
 .cardH{
   display: flex;
   flex-direction: column;
@@ -52,11 +64,20 @@
   max-width: 300px;
   max-height: 700px;
   background-color: white;
-  border: #282c34 1px solid;
   border-radius: 10px;
-  box-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.452);
+  box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
   margin-left: 20px;
   margin-top: 20px;
+}
+
+.cardCarrito{
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .centerCount{
@@ -111,24 +132,23 @@
   padding: 5px;
   color: #ffffff;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 20px;
   text-decoration: dashed;
   margin-bottom: 15px;
+  font-size: 0.8rem;
 }
 
 .btnAddCar:hover{
-  background-color: #947EC3;
+  background-color: #c7bce0;
   border: black 0.1px solid;
   padding: 5px;
-  color: #EEF3D2;
+  color: #292929;
   font-weight: 500;
-  border-radius: 5px;
   text-decoration: dashed;
 }
 
 .imgProducto{
   border-radius: 10px;
-  margin-top: 3px;
 }
 
 .titleInicio{
@@ -141,6 +161,7 @@
   align-items:center;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 75vh;
 }
 
 .itemListLoading{
@@ -167,17 +188,17 @@
 
 .cardDetalles{
   width: 95%;
-  height: 90vh;
+  height: auto;
   border: 0.2px rgba(0, 0, 0, 0.171) solid;
   border-radius: 50px;
   margin: 2.5%;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.1fr 0.3fr 0.6fr;
   grid-template-areas:
-                      "titleDetails titleDetails titleDetails titleDetails"
                       "imgProductoDetail imgProductoDetail imgProductoDetail imgProductoDetail"
+                      "titleDetails titleDetails titleDetails titleDetails"
                       "textDetails textDetails textDetails textDetails"
                       "precioDetails precioDetails precioDetails precioDetails"
 }
@@ -212,84 +233,25 @@
   width: 50px;
 }
 
-
-@media (min-width: 576px) { 
-
-  .cardDetalles{
-    width: 95%;
-    height: 90vh;
-    border: 0.2px rgba(0, 0, 0, 0.171) solid;
-    border-radius: 50px;
-    margin: 2.5%;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-                        "titleDetails titleDetails titleDetails titleDetails"
-                        "imgProductoDetail imgProductoDetail imgProductoDetail imgProductoDetail"
-                        "textDetails textDetails textDetails textDetails"
-                        "precioDetails precioDetails precioDetails precioDetails"
-  }
-
- }
-
-
-
-@media (min-width: 768px) { 
-
-  .cardDetalles{
-    width: 95%;
-    height: 90vh;
-    border: 0.2px rgba(0, 0, 0, 0.171) solid;
-    border-radius: 50px;
-    margin: 2.5%;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-                        "imgProductoDetail imgProductoDetail titleDetails titleDetails"
-                        "imgProductoDetail imgProductoDetail textDetails textDetails"
-                        "imgProductoDetail imgProductoDetail textDetails textDetails"
-                        "imgProductoDetail imgProductoDetail precioDetails precioDetails"
-  }
-
- }
-
-
-
-@media (min-width: 992px) { 
-
-
- }
-
-
-
-@media (min-width: 1200px) { 
-
-
- }
-
-
-
-@media (min-width: 1400px) { 
-
-
- }
-
- .cartContainer{
+.cartContainer{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 0.3fr;
   align-items: center;
   justify-items: center;
   grid-template-areas:
-                      "imgProducto precioCart cantidadCart subtotalCart eliminarItemCard"
-                      "imgProducto precioCart cantidadCart subtotalCart eliminarItemCard"
-                      "imgProducto precioCart cantidadCart subtotalCart eliminarItemCard"
-                      "titleCart precioCart cantidadCart subtotalCart eliminarItemCard"
+                      "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+                      "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+                      "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
+                      "imgProducto cantidadCart precioCart subtotalCart eliminarItemCard"
 
+ }
+
+ .tamanoTitleCart{
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 15px;
+  padding-bottom: 15px;
  }
 
   .titleCart{
@@ -339,3 +301,148 @@
     padding-top: 15px;
     padding-bottom: 15px;
   }
+
+  .impFinal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .labelTotal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .btnFinalC{
+    margin-right: 40px;
+  }
+
+  .btnVaciarCarrito{
+    color: red;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+  }
+
+  .centerCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 75vh;
+  }
+
+  .titleCart{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#947EC3;
+  }
+
+  .detalleFooter{
+    text-align: center;
+    color: white;
+    max-width: 721px;
+  }
+
+  .extraFooter{
+    text-align: center;
+    color: white;
+    max-width: 721px;
+  }
+
+  .lineFooter{
+    border-top: 1px solid rgb(255, 255, 255);
+    max-width: 600px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .imgFooter{
+    margin-top: 15px;
+  }
+
+  .iconsFooter{
+    margin-bottom: 15px;
+  }
+
+  .iconFoot{
+    margin-right: 10px;
+  }
+
+  .iconFoot:hover{
+    color: #f7fafc;
+  }
+
+
+
+@media (min-width: 576px) { 
+
+  .cardDetalles{
+    width: 95%;
+    height: auto;
+    border: 0.2px rgba(0, 0, 0, 0.171) solid;
+    border-radius: 50px;
+    margin: 2.5%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 0.3fr 0.4fr;
+    grid-template-areas:
+                        "imgProductoDetail imgProductoDetail imgProductoDetail imgProductoDetail"
+                        "titleDetails titleDetails titleDetails titleDetails"
+                        "textDetails textDetails textDetails textDetails"
+                        "precioDetails precioDetails precioDetails precioDetails"
+  }
+
+ }
+
+
+
+@media (min-width: 768px) { 
+
+  .cardDetalles{
+    width: 95%;
+    height: 90vh;
+    border: 0.2px rgba(0, 0, 0, 0.171) solid;
+    border-radius: 50px;
+    margin: 2.5%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        "imgProductoDetail imgProductoDetail titleDetails titleDetails"
+                        "imgProductoDetail imgProductoDetail textDetails textDetails"
+                        "imgProductoDetail imgProductoDetail textDetails textDetails"
+                        "imgProductoDetail imgProductoDetail precioDetails precioDetails"
+  }
+
+ }
+
+
+
+@media (min-width: 992px) { 
+
+
+ }
+
+
+
+@media (min-width: 1200px) { 
+
+
+ }
+
+
+
+@media (min-width: 1400px) { 
+
+
+ }

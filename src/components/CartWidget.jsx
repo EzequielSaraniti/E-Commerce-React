@@ -3,6 +3,7 @@ import React from 'react'
 import imgComprar from "../img/comprar.png";
 import { useState, useContext } from 'react';
 import { CartContext } from '../context/CartContext.jsx';
+import {Link} from 'react-router-dom';
 
 
 export default function CartWidget() {
@@ -13,9 +14,10 @@ export default function CartWidget() {
         <div>
             {getItemQty() > 0 && <span className="cantidadCompras">{getItemQty()}</span>}
             
-            <a href="#">
+            <Link to={`/cart`}>
                 <img src={imgComprar} width="30px" className="imgCarrito" />
-            </a>
+            </Link>
+            
         </div>
     )
 }
