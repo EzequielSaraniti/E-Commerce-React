@@ -380,6 +380,27 @@
     color: #f7fafc;
   }
 
+  .noHayCompras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 75vh;
+  }
+
+  .btnIrDeCompras{
+      margin-top: 50px;
+      background-color: #947EC3;
+      border: black 0.1px solid;
+      padding: 5px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 20px;
+      text-decoration: dashed;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+  }
+
 
 
 @media (min-width: 576px) { 
