@@ -1,7 +1,6 @@
+import { Link } from 'react-router-dom';
 import logo from "../img/logoHakunix.png";
-import React from "react";
-import CartWidget from "./CartWidget.jsx"
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import CartWidget from "./CartWidget.jsx";
 
 function NavBar() {
     return (

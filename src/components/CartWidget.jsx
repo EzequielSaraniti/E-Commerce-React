@@ -1,9 +1,8 @@
 
-import React from 'react'
-import imgComprar from "../img/comprar.png";
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext.jsx';
-import {Link} from 'react-router-dom';
+import imgComprar from "../img/comprar.png";
 
 
 export default function CartWidget() {
@@ -12,12 +11,12 @@ export default function CartWidget() {
 
     return (
         <div>
-            {getItemQty() > 0 && <span className="cantidadCompras">{getItemQty()}</span>}
+            {getItemQty() > 0 && <Link to={`/cart`}><span className="cantidadCompras">{getItemQty()}</span></Link>}
             
-            <Link to={`/cart`}>
-                <img src={imgComprar} width="30px" className="imgCarrito" />
-            </Link>
+            {getItemQty() > 0 && <Link to={`/cart`}><img src={imgComprar} width="30px" className="imgCarrito" /></Link>}
             
+            {getItemQty() == 0 && <Link to={`/cart`}><img src={imgComprar} width="30px" className="imgCarrito" /></Link>}
+
         </div>
     )
 }

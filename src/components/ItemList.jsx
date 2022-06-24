@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Items from "./Items.jsx"
-import {Route, useParams} from 'react-router-dom';
+import Items from "./Items.jsx";
 
 
 export default function ItemList({category, resultado}) {
+
+    console.log(category)
 
     let filterResult = []
     //Filtramos por category
@@ -13,10 +13,9 @@ export default function ItemList({category, resultado}) {
         filterResult = resultado
     }
 
-
     return (
         <>
-
+        
             <div className='itemsListStyle'>
                 {filterResult && (filterResult?.map((item) =>
                     <Items id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} stock={item.stock} />

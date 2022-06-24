@@ -70,6 +70,14 @@
   margin-top: 20px;
 }
 
+.zoom {
+  transition: transform .2s; 
+}
+
+.zoom:hover {
+  transform: scale(1.03); 
+}
+
 .cardCarrito{
   max-width: 800px;
   background-color: white;
@@ -98,11 +106,19 @@
 
 .btnCard{
   width: 25px;
-  background-color: #947EC3;
+  background-color: #805AD5;
   border: black 0.1px solid;
   color: #EEF3D2;
   font-weight: 500;
   border-radius: 5px;
+}
+
+.btnCard:hover{
+  background-color: #c7bce0;
+  border: black 0.1px solid;
+  color: #292929;
+  font-weight: 500;
+  text-decoration: dashed;
 }
 
 .styleNav{
@@ -123,16 +139,16 @@
 }
 
 .agregarItems{
-  margin: 7px 5px;
+  margin: 7px 0px 20px 0px;
 }
 
 .btnAddCar{
-  background-color: #947EC3;
+  background-color: #805AD5;
   border: black 0.1px solid;
   padding: 5px;
   color: #ffffff;
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 10px;
   text-decoration: dashed;
   margin-bottom: 15px;
   font-size: 0.8rem;
@@ -141,7 +157,6 @@
 .btnAddCar:hover{
   background-color: #c7bce0;
   border: black 0.1px solid;
-  padding: 5px;
   color: #292929;
   font-weight: 500;
   text-decoration: dashed;
@@ -401,6 +416,58 @@
       font-size: 1.2rem;
   }
 
+  .btnSeguirC{
+    background-color: #7ec398;
+    border: black 0.1px solid;
+    padding: 5px;
+    color: #000000;
+    font-weight: 500;
+    border-radius: 20px;
+    text-decoration: dashed;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+  }
+
+  .btnSeguirC:hover{
+    color: #d8fa17;
+  }
+
+  .priceAnt{
+    color: #000000;
+    font-size: 0.8rem;
+    font-weight:600;
+    text-decoration:line-through;
+    margin-right: 5px;
+  }
+
+  .priceDesp{
+    color: #9478ca;
+    font-size: 1.3rem;
+    font-weight:600;
+    text-shadow: #8b8b8b 1px 1px 1px;
+  }
+
+  .btnDetalle{
+    text-decoration: dashed;
+    color: #6c43bd;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+
+  }
+
+  .btnDetalle:hover{
+    color: rgb(168, 72, 177);
+  }
+
+  .uDisp{
+    background-color: #00B5D8;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+  }
 
 
 @media (min-width: 576px) { 

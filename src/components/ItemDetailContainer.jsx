@@ -1,3 +1,4 @@
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemDetail } from './ItemDetail';
@@ -6,27 +7,22 @@ export default function ItemDetailContainer() {
 
     const [itemDet, itemDetailId] = useState()
     const {itemId } = useParams()
-    
+
+    //Firestore
+    const coleccion = 'items'
+    const db = getFirestore()
+    const detalleProducto = doc(db, coleccion, itemId)
 
     useEffect(() => {
 
-        fetch('../../productos.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
+        getDoc(detalleProducto).then((res) => {
+            if (res.exists()) {
+                itemDetailId({ ...res.data(), id: res.id})
+            } else{
+                console.log('No existe')
             }
-        )
-            .then((response) => response.json())
-            .then((data) => {itemDetailId(data.filter(prod => prod.id == itemId))})
-            .catch((e) => {
-                console.log("salio mal")
-            })
-            .finally(() => {
-                console.log("fin")
-            })
-    }, [itemId])
+
+    })}, [itemId])
 
 
     return (

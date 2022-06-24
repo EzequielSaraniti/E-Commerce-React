@@ -1,63 +1,30 @@
-import React from 'react'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from "./ItemList.jsx"
 import Loader from "./Loader.jsx"
-import {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
 
-export default function ItemListContainer({ category }) {
+export default function ItemListContainer() {
 
     //estados
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [resultado, setResultado] = useState([]);
-    const {id } = useParams()
+    const {id} = useParams()
+
+    //firebase
+    const coleccion = "items"
+    const db = getFirestore()
+
+    const coleccionDeProductos = collection(db, coleccion)
 
     useEffect(() => {
 
-        fetch('productos.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then((response) => response.json())
-            .then((data) => {
-
-                setTimeout(() => {
-
-                    setLoading(false)
-                    setResultado(data);
-
-                }, 1000);
-            })
-            .catch((e) => {
-
-            //este fetch es para arreglar un problema de rutas, cuando usemos FireBase Vuelta todo este contenido.
-                fetch('../productos.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then((response) => response.json())
-            .then((data) => {
-
-                setTimeout(() => {
-
-                    setLoading(false)
-                    setResultado(data);
-
-                },0);
-            })
-             //BORRAR Hasta acá.
-            })
-            .finally(() => {
-                console.log("fin")
-            })
+        getDocs(coleccionDeProductos).then((res)=>{
+            setResultado(res.docs.map((doc) => ({ id: doc.id, ...doc.data()} )))
+            setLoading(false)
+        })
+        
     }, [id])
 
 

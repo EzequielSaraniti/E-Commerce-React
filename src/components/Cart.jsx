@@ -1,7 +1,6 @@
-import React from 'react'
-import { useContext } from 'react'
-import { CartContext } from '../context/CartContext.jsx'
-import {Link} from 'react-router-dom';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext.jsx';
 const imgProductos = require.context("../img", true)
 
 export default function Cart() {
@@ -25,11 +24,12 @@ export default function Cart() {
               <p className='subtotalCart'>Precio Total</p>
             </div>
           </div>
+
           {cart.map(product => (
 
             <div className='lineCart'>
               <div className='cartContainer'>
-                <img className='imgProducto img-fluid' src={imgProductos(`./${product.pictureUrl}`)} alt={"Producto1"} width="70px" />
+                <img className='imgProducto img-fluid' src={product.pictureUrl} alt={"Producto1"} width="70px" />
                 <p className='cantidadCart'>{product.cantidad} x {product.title}</p>
                 <p className='precioCart'>Precio: ${product.price}</p>
                 <p className='subtotalCart'>Subtotal: ${product.cantidad * product.price}</p>
