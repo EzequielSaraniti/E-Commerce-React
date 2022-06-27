@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-Commerce-React/static/css/main.ba50192c.css",
-    "main.js": "/E-Commerce-React/static/js/main.dc4517be.js",
+    "main.css": "/E-Commerce-React/static/css/main.ac33d618.css",
+    "main.js": "/E-Commerce-React/static/js/main.a1e73591.js",
     "static/js/787.46493d11.chunk.js": "/E-Commerce-React/static/js/787.46493d11.chunk.js",
     "static/media/ico.ico": "/E-Commerce-React/static/media/ico.16874a3a4ba6003af1fa.ico",
     "static/media/alfombra.jpg": "/E-Commerce-React/static/media/alfombra.1b3141129638806473b6.jpg",
@@ -13,12 +13,12 @@
     "static/media/basura.png": "/E-Commerce-React/static/media/basura.1f11b04329f4f3f7befa.png",
     "static/media/logoHakunix.png": "/E-Commerce-React/static/media/logoHakunix.cd65f92268229e148434.png",
     "index.html": "/E-Commerce-React/index.html",
-    "main.ba50192c.css.map": "/E-Commerce-React/static/css/main.ba50192c.css.map",
-    "main.dc4517be.js.map": "/E-Commerce-React/static/js/main.dc4517be.js.map",
+    "main.ac33d618.css.map": "/E-Commerce-React/static/css/main.ac33d618.css.map",
+    "main.a1e73591.js.map": "/E-Commerce-React/static/js/main.a1e73591.js.map",
     "787.46493d11.chunk.js.map": "/E-Commerce-React/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba50192c.css",
-    "static/js/main.dc4517be.js"
+    "static/css/main.ac33d618.css",
+    "static/js/main.a1e73591.js"
   ]
 }
