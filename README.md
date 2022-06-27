@@ -5,7 +5,7 @@
           src="https://github.com/EzequielSaraniti/E-Commerce-React/blob/master/src/img/logoHakunix.png?raw=true"
           alt="react"
           width="auto"
-          height="180px"
+          height="120px"
         />
     </a>
 </div>
