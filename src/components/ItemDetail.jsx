@@ -45,7 +45,7 @@ export function ItemDetail({ itemDet }) {
 
       {/* Imagen del producto */}
       <div className='imgProductoDetail'>
-        <img className='imgProducto img-fluid' src={pictureUrl} alt={"Producto1"} max-width="550px" />
+        <img className='imgProducto img-fluid' src={pictureUrl} alt={"Producto1"} />
       </div>
 
       <h4 className='titleDetails'>{title}</h4>

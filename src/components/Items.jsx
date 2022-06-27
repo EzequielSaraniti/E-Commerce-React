@@ -8,14 +8,16 @@ export default function Items({ id, title, description, price, pictureUrl, stock
         //Card
         <div className='cardH zoom'>
 
+            <div className='sizeImg'>
             {/* Imagen del producto */}
             <Link to={`/item/${id}`}><img className='imgProducto' src={pictureUrl} alt={"Producto1"} width="300px" /></Link>
+            </div>
 
             {/* Titulo de producto */}
             <b className='styleTitle'>{title}</b>
 
-            {/* Breve desc del producto */}
-            <p className='descItem'>{description}</p>
+            {/* Breve desc del producto
+            <p className='descItem'>{description}</p> */}
 
             <div>
                 {/* Precio del producto */}
