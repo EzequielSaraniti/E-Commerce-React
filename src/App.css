@@ -96,6 +96,19 @@
   margin-bottom: 50px;
 }
 
+.containerCheckOut{
+  border-radius: 10px;
+  box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.titleT{
+  text-align: center;
+}
+
 .centerCount{
   display: flex;
   flex-direction: column;
@@ -110,6 +123,7 @@
   text-align: center;
   border: none;
   background-color: white;
+  margin: 0px 8px 0px 8px;
 }
 
 .btnCard{
@@ -193,6 +207,7 @@
   display: flex;
   align-items:center;
   justify-content: center;
+  margin-top: 20vh;
 }
 
 .descItem{
@@ -272,6 +287,20 @@
 
  }
 
+ .cartContainerCheck{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+                      "imgProducto cantidadCart precioCart subtotalCart"
+                      "imgProducto cantidadCart precioCart subtotalCart"
+                      "imgProducto cantidadCart precioCart subtotalCart"
+                      "imgProducto cantidadCart precioCart subtotalCart"
+
+ }
+
  .tamanoTitleCart{
   width: 90%;
   margin-left: 5%;
@@ -325,6 +354,12 @@
     margin-left: 5%;
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+
+  .sinlineCart{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 5x;
   }
 
   .impFinal{
@@ -479,6 +514,65 @@
     font-weight: bold;
   }
 
+  .checkoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+                      "topGrid topGrid"
+                      "col1 col1"
+                      "col2 col2"
+                      "centerBtn centerBtn";
+  }
+
+  .centerBtn{
+    grid-area: centerBtn;
+    text-align: center;
+  }
+
+  .topGrid{
+    grid-area: topGrid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .col1{
+    grid-area: col1;
+  }
+
+  .col2{
+    grid-area: col2;
+  }
+
+  .cardUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px 5px 20px 5px;
+
+    border-radius: 10px;
+    box-shadow: rgb(71 71 71 / 30%) 0px 0px 40px 1px;
+  }
+
+  .textCheckout{
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .spaceBet{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+  }
+
+  .input-group{
+    max-width: 70%;
+  }
 
 @media (min-width: 576px) { 
 
@@ -497,6 +591,17 @@
                         "titleDetails titleDetails titleDetails titleDetails"
                         "textDetails textDetails textDetails textDetails"
                         "precioDetails precioDetails precioDetails precioDetails"
+  }
+
+  .checkoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+                      "topGrid topGrid"
+                      "col1 col2"
+                      "col1 col2"
+                      "centerBtn centerBtn";
   }
 
  }
@@ -520,6 +625,17 @@
                         "imgProductoDetail imgProductoDetail textDetails textDetails"
                         "imgProductoDetail imgProductoDetail textDetails textDetails"
                         "imgProductoDetail imgProductoDetail precioDetails precioDetails"
+  }
+
+  .checkoutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+                      "topGrid topGrid"
+                      "col1 col2"
+                      "col1 col2"
+                      "centerBtn centerBtn";
   }
 
  }
