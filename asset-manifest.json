@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-Commerce-React/static/css/main.ac33d618.css",
-    "main.js": "/E-Commerce-React/static/js/main.a1e73591.js",
+    "main.css": "/E-Commerce-React/static/css/main.56fcefaf.css",
+    "main.js": "/E-Commerce-React/static/js/main.268f993d.js",
     "static/js/787.46493d11.chunk.js": "/E-Commerce-React/static/js/787.46493d11.chunk.js",
     "static/media/ico.ico": "/E-Commerce-React/static/media/ico.16874a3a4ba6003af1fa.ico",
     "static/media/alfombra.jpg": "/E-Commerce-React/static/media/alfombra.1b3141129638806473b6.jpg",
@@ -9,16 +9,18 @@
     "static/media/bolsodemate.jpg": "/E-Commerce-React/static/media/bolsodemate.d1ad0a9005ab44792b9f.jpg",
     "static/media/yerbera.jpg": "/E-Commerce-React/static/media/yerbera.10d2244a356548c7b18c.jpg",
     "static/media/equipodemate.jpg": "/E-Commerce-React/static/media/equipodemate.11dba55e3057c6f16c0f.jpg",
+    "static/media/spinner.gif": "/E-Commerce-React/static/media/spinner.83410eb2565339eaf75c.gif",
     "static/media/atomizador.jpg": "/E-Commerce-React/static/media/atomizador.b44f11b92d22ee8d009a.jpg",
     "static/media/basura.png": "/E-Commerce-React/static/media/basura.1f11b04329f4f3f7befa.png",
     "static/media/logoHakunix.png": "/E-Commerce-React/static/media/logoHakunix.cd65f92268229e148434.png",
+    "static/media/spinner.svg": "/E-Commerce-React/static/media/spinner.9471d726a68eccb7ea4d.svg",
     "index.html": "/E-Commerce-React/index.html",
-    "main.ac33d618.css.map": "/E-Commerce-React/static/css/main.ac33d618.css.map",
-    "main.a1e73591.js.map": "/E-Commerce-React/static/js/main.a1e73591.js.map",
+    "main.56fcefaf.css.map": "/E-Commerce-React/static/css/main.56fcefaf.css.map",
+    "main.268f993d.js.map": "/E-Commerce-React/static/js/main.268f993d.js.map",
     "787.46493d11.chunk.js.map": "/E-Commerce-React/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac33d618.css",
-    "static/js/main.a1e73591.js"
+    "static/css/main.56fcefaf.css",
+    "static/js/main.268f993d.js"
   ]
 }
