@@ -1,7 +1,7 @@
 import Items from "./Items.jsx";
 
 
-export default function ItemList({ category, resultado, busqueda }) {
+export default function ItemList({ category, resultado, busqueda, loading }) {
 
 
     let filterResult = []
@@ -33,7 +33,7 @@ export default function ItemList({ category, resultado, busqueda }) {
 
     return (
         <>
-            {filterCount == 0 &&
+            {filterCount == 0 & loading == false &&
                 <div className='lineCart'>
                     <div className='noResults'>
                         <b className="titleT">No se encontraron resultados</b>

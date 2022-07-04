@@ -46,7 +46,7 @@ export default function ItemListContainer() {
 
             {resultado &&
                 <div>
-                    <ItemList category={id} resultado={resultado} busqueda={busqueda} />
+                    <ItemList category={id} resultado={resultado} busqueda={busqueda} loading={loading} />
                 </div>}
 
         </>
