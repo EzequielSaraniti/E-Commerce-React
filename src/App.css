@@ -137,6 +137,26 @@
   border-radius: 5px;
 }
 
+.btnContacto{
+  text-decoration: none;
+  list-style-type: none;
+  background-color: #825dd0;
+  border: black 0.1px solid;
+  color: #EEF3D2;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 10px;
+}
+
+.btnContacto:hover{
+  background-color: #c7bce0;
+  border: black 0.1px solid;
+  color: #292929;
+  font-weight: 500;
+  text-decoration: dashed;
+}
+
 .btnCard:hover{
   background-color: #c7bce0;
   border: black 0.1px solid;
@@ -176,6 +196,27 @@
   text-decoration: dashed;
   margin-bottom: 15px;
   font-size: 0.8rem;
+  text-align: center;
+}
+
+.btnAddCarFC{
+  background-color: #805AD5;
+  border: black 0.1px solid;
+  padding: 5px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 10px;
+  text-decoration: dashed;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.btnAddCarFC:hover{
+  background-color: #c7bce0;
+  border: black 0.1px solid;
+  color: #292929;
+  font-weight: 500;
+  text-decoration: dashed;
 }
 
 .btnAddCar:hover{
@@ -371,6 +412,12 @@
     justify-content: center !important;
   }
 
+  .noResults{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .search{
     margin-top: 20px;
     width: 50% !important;
@@ -382,11 +429,14 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
-  .btnFinalC{
-    margin-right: 40px;
+  .btnCart{
+    display: flex;
+    align-items:center;
+    flex-direction:row ;
+    justify-content:space-between;
   }
 
   .btnVaciarCarrito{
@@ -394,7 +444,7 @@
     background-color: white;
     border: none;
     font-weight: 500;
-    margin-top: 15px;
+    margin-left: 15px;
   }
 
   .centerCart{
@@ -626,19 +676,13 @@
                       "centerBtn centerBtn";
   }
 
-  .btnVaciarCarrito{
-    color: red;
-    background-color: white;
-    border: none;
-    font-weight: 500;
-    margin-top: 0px;
-  }
 
   .labelTotal{
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 1rem;
+    text-align: center;
   }
 
  }
@@ -675,12 +719,6 @@
                       "centerBtn centerBtn";
   }
 
-  .btnVaciarCarrito{
-    color: red;
-    background-color: white;
-    border: none;
-    font-weight: 500;
-  }
 
  }
 

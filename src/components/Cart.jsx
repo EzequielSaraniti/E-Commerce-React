@@ -40,11 +40,11 @@ export default function Cart() {
           ))}
 
 
-          <div className='impFinal'>
+          
           <div className='labelTotal'>Importe total: ${getItemPrice()} ({getItemQty()} Producto/s)</div>
-
-          <div>
-          <Link className='btnAddCar btnFinalC' to={`/checkout`}>Finalizar Compra</Link>
+          <div className='impFinal'>
+          <div className='btnCart'>
+          <Link className='btnAddCarFC' to={`/checkout`}>Finalizar Compra</Link>
             <button className='btnVaciarCarrito' onClick={emptyCart}>Vaciar Carrito</button>
           </div>
           </div>
