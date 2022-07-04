@@ -33,7 +33,7 @@ export default function ItemList({ category, resultado, busqueda, loading }) {
 
     return (
         <>
-            {filterCount == 0 & loading == false &&
+            {filterCount === 0 && loading == false &&
                 <div className='lineCart'>
                     <div className='noResults'>
                         <b className="titleT">No se encontraron resultados</b>
