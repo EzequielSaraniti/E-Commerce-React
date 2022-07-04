@@ -1,5 +1,5 @@
-import { createContext, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { createContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext()
@@ -8,7 +8,13 @@ const { Provider } = CartContext
 
 const MyProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) ?? [])
+
+    useEffect(() => 
+    {
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+    }, [cart]);
 
     //notificación de Toastify
     const notifySucess = (alert) => toast.success(alert, {
@@ -82,7 +88,7 @@ const MyProvider = ({ children }) => {
     }
 
 
-    return <Provider value={{ cart, isInCart, addItem, deleteItem, emptyCart, getItemPrice, getItemQty, notifySucess }} >{children}</Provider>
+    return <Provider value={{ cart, isInCart, addItem, deleteItem, emptyCart, getItemPrice, getItemQty, notifySucess, notifyError }} >{children}</Provider>
 }
 
 export default MyProvider

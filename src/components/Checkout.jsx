@@ -1,13 +1,13 @@
-import React from 'react'
-import { useState, useContext } from 'react'
-import { CartContext } from '../context/CartContext.jsx';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { addDoc, collection, getFirestore, updateDoc, doc } from 'firebase/firestore';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-const imgProductos = require.context("../img", true)
+import { CartContext } from '../context/CartContext.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Checkout() {
     // Contexto de Carrito.
-    const { cart, deleteItem, getItemQty, getItemPrice, emptyCart } = useContext(CartContext)
+    const { cart, getItemPrice, emptyCart, notifyError } = useContext(CartContext)
     //Nombre de usuario, email, celular en estado.
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -21,6 +21,13 @@ export default function Checkout() {
 
     //Grabamos el Id del usuario en estado.
     const [idCompra, setIdCompra] = useState("")
+
+    function updateStocks(cart) {
+        cart.forEach((cartItem) => {
+            const stockDoc = doc(db, "items", cartItem.id);
+            updateDoc(stockDoc, { stock: cartItem.stock - cartItem.cantidad });
+        });
+    }
 
     //Base de datos Firestore.
     const db = getFirestore()
@@ -65,8 +72,9 @@ export default function Checkout() {
 
         addDoc(orderCollection, order).then(({ id }) => {
             setIdCompra(id)
+            updateStocks(cart)
         })} else{
-            alert("Por favor, ingrese todos los datos requeridos.")
+            notifyError("Por favor, ingrese todos los datos requeridos correctamente.")
         }
 
     }
@@ -76,6 +84,7 @@ export default function Checkout() {
 
 
         <div className='checkoutContainer'>
+            
             {idCompra != "" ?
 
                 <div className='col1 cardUser'>
@@ -135,6 +144,8 @@ export default function Checkout() {
                     </div>
                 </>
             }
+
+<ToastContainer />
 
             <div className='containerCheckOut col2'>
 
