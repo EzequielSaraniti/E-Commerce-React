@@ -382,6 +382,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
+    font-size: 0.8rem;
   }
 
   .btnFinalC{
@@ -393,6 +394,7 @@
     background-color: white;
     border: none;
     font-weight: 500;
+    margin-top: 15px;
   }
 
   .centerCart{
@@ -624,6 +626,21 @@
                       "centerBtn centerBtn";
   }
 
+  .btnVaciarCarrito{
+    color: red;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+
+  .labelTotal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
  }
 
 
@@ -656,6 +673,13 @@
                       "col1 col2"
                       "col1 col2"
                       "centerBtn centerBtn";
+  }
+
+  .btnVaciarCarrito{
+    color: red;
+    background-color: white;
+    border: none;
+    font-weight: 500;
   }
 
  }
