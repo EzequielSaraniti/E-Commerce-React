@@ -17,7 +17,9 @@
 
 Contenido.
 
-- [Installation](#installation)
+- [About](#About)
+- [Libs and Frameworks](#Libs-and-Frameworks)
+- [Installation](#Installation)
 - [Deploy](#Despliegue)
 ## About
 
@@ -29,12 +31,12 @@ Proyecto frontend basado en react realizado en la Comisión 31205 de coderhouse,
 - React router dom
 - Firebase
 
-## Installation ⚙️
+## Installation
 
-`$ yarn`
+`npm install`
 
-## Despliegue 📦
-`$ yarn dev`
+## Despliegue
+`npm start`
 
 
-👉 Link [Production](https://ezequielsaraniti.github.io/E-Commerce-React/ "Production") 👈
+👉 Link [Production](https://hakunix-7cae6.web.app/ "Production") 👈
