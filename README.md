@@ -13,6 +13,8 @@
 # Curso React Coderhouse
 ## Proyecto Ecommerce Hakunix
 
+![Ecommerce](https://user-images.githubusercontent.com/38590569/177210749-ce7589b2-dc3d-4e7f-8d12-fc2c3284f58b.gif)
+
 ## Table of Contents 🚀
 
 Contenido.
